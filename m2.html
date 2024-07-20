@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RGB Color Picker</title>
+<style>
+    #colorPicker {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="colorPicker"></div>
+<input type="text" style="margin-top: 10px; margin-left: 10px;"id="rgbValue" readonly>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const colorPicker = document.getElementById('colorPicker');
+        const rgbValue = document.getElementById('rgbValue');
+
+        function updateColor(e) {
+            const rect = colorPicker.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const red = Math.round((x / rect.width) * 255);
+            const green = Math.round((y / rect.height) * 255);
+            const blue = 255 - Math.round((x / rect.width) * 255);
+
+            colorPicker.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            rgbValue.value = `RGB  (${red}, ${green}, ${blue})`;
+        }
+
+        colorPicker.addEventListener('mousemove', updateColor);
+    });
+</script>
+</body>
+</html>

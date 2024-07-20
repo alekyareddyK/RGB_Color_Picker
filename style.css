@@ -1,0 +1,140 @@
+
+html {
+    height: 100%;
+    width: 100%;
+  }
+  body{
+    background-color: rgb(115,185,113);
+  }
+  #block
+  {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: black;
+  
+  }
+  #heading{
+    margin-bottom: 20px;
+  }
+  #heading:hover{
+    background-color: #fff;
+    color:  black;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .block1{
+    display: flex;
+    justify-content: center;
+    justify-content:space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 17px;
+    position: relative;
+    animation: mymove 5s infinity;
+  }
+  
+  .block1:hover {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  
+  }
+  
+  label{
+    margin: 10px;
+  }
+  #red{
+    height: 25px;
+    width: 300px;
+    cursor: pointer;
+    margin: 5px;
+    background: linear-gradient(90deg, #000, red);
+  }
+  #green{
+    height: 25px;
+    width: 300px;
+    cursor: pointer;
+    margin: 5px;
+    background: linear-gradient(90deg, #000, green);
+  }
+  #blue{
+    height: 25px;
+    width: 300px;
+    cursor: pointer;
+    margin: 5px;
+    background: linear-gradient(90deg, #000, blue);
+  }
+  
+  .slider{
+  appearance: none;
+  width: 300px;
+  height: 15px;
+  background: #FF5C35 ;
+  outline: none;
+  border-radius: 50px;
+  
+    }
+  
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    cursor: pointer;
+  
+  }
+  
+  @media screen and (min-width: 80px) {
+    #heading{
+       font-size: 10px;
+     }
+    #red{
+      height: 25px;
+      width: 150px;
+      }
+    #green{
+      height: 25px;
+      width: 150px;
+      }
+    #blue{
+      height: 25px;
+      width: 150px;
+      }
+    .slider::-webkit-slider-thumb {
+      width: 15px; 
+      height: 15px;
+    }
+  }
+  @media screen and (max-width: 320px){
+    #heading{
+       font-size: 5px ;
+      text-align : center;
+      width : 50px;
+      height: 10px;
+      float: center;
+     }
+    #red{
+      height: 25px;
+      width: 50px;
+      }
+    #green{
+      height: 25px;
+      width: 50px;
+      }
+    #blue{
+      height: 25px;
+      width: 50px;
+      }
+    .slider::-webkit-slider-thumb {
+      width: 10px; 
+      height: 10px;
+    }
+  
+  }
